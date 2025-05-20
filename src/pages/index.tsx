@@ -2,7 +2,7 @@ import Layout from "@/layouts";
 // import Hero from "@/sections/hero";
 import TopCategories from "@/sections/top-categories";
 import TopProducts from "@/sections/top-products";
-import Contact from "@/sections/contact";
+// import Contact from "@/sections/contact";
 // import { Backgrounds } from "@/lib/constant";
 
 
