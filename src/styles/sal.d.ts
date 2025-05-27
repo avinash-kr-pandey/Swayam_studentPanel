@@ -3,11 +3,12 @@ declare module "sal.js" {
     threshold?: number;
     once?: boolean;
     disable?: boolean;
+    rootMargin?: string;
+    animateClassName?: string;
+    selector?: string;
   }
 
-  const sal: {
-    init: (options?: SalOptions) => void;
-  };
+  function sal(options?: SalOptions): void;
 
   export default sal;
 }

@@ -1,4 +1,4 @@
-import DealCard from "@/components/card/dealsCard";
+// import DealCard from "@/components/card/dealsCard";
 import React from "react";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -38,7 +38,7 @@ function Deals({ DealsCard }: Props) {
       >
         {DealsCard.map((card, key) => (
           <SwiperSlide key={key}>
-            <DealCard cardData={card} />
+            {/* <DealCard cardData={card} /> */}
           </SwiperSlide>
         ))}
       </Swiper>

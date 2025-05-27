@@ -3,11 +3,10 @@ import sal from "sal.js";
 
 const SalAnimation = () => {
   useEffect(() => {
-    if (typeof sal === "function") {
-      sal(); // ✅ this is the actual init function
-    } else if (sal && typeof sal.init === "function") {
-      sal.init(); // fallback
-    }
+    sal({
+      threshold: 0.1,
+      once: true,
+    });
   }, []);
 
   return null;
