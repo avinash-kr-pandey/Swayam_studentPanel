@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { FaBars, FaXmark } from "react-icons/fa6";
 
 export default function MobileHeader() {
   const [open, setOpen] = useState<boolean>(false);
-  const path = usePathname();
+  // const path = usePathname();
   return (
     <div className="bg-white shadow-lg select-none fixed top-0 z-10 w-full">
       <div className="px-6 py-3 xl:hidden flex justify-between items-center">
@@ -38,13 +38,20 @@ export default function MobileHeader() {
         bg-white p-3 text-gray-600 px-24 flex flex-col xl:hidden
         ${open ? "flex" : "hidden"}`}
       >
+        <div>
+          <input
+            type="text"
+            placeholder="Search Courses..."
+            className="border-2 border-gray-300 rounded-lg p-2 w-64"
+          />
+        </div>
         <ul className="flex-col flex gap-y-1">
-          <Link
+          {/* <Link
             href={"/"}
             className={`min-w-20 p-2 text-center ${path === "/" && "active"}`}
           >
             <li className="capitalize">Home</li>
-          </Link>
+          </Link> */}
           {/* <Link
             href={"/about-us"}
             className={`min-w-20 p-2 text-center ${
@@ -53,10 +60,8 @@ export default function MobileHeader() {
           >
             <li className="capitalize">About Us</li>
           </Link> */}
-      
-      
-        
-{/*          
+
+          {/*          
           <Link
             href={"/contact"}
             className={`hover:text-primary-500 min-w-20 p-2 text-center ${

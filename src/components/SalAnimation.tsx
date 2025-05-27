@@ -1,10 +1,13 @@
 import { useEffect } from "react";
 import sal from "sal.js";
-import "sal.js/dist/sal.css";
 
 const SalAnimation = () => {
   useEffect(() => {
-    sal();
+    if (typeof sal === "function") {
+      sal(); // ✅ this is the actual init function
+    } else if (sal && typeof sal.init === "function") {
+      sal.init(); // fallback
+    }
   }, []);
 
   return null;

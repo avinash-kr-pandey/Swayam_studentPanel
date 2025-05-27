@@ -15,7 +15,7 @@ const Index = () => {
       }}
     >
       <main>
-        <h1>Welcome to the Home Page</h1>
+        <h1>Welcome to the Swayam  ||  I K G Punjab Technical University</h1>
       </main>
 
       <footer
@@ -28,7 +28,7 @@ const Index = () => {
           color: "white",
         }}
       >
-        © {new Date().getFullYear()} MyWebsite. All rights reserved.
+        © {new Date().getFullYear()} HM. All rights reserved.
       </footer>
     </div>
   );

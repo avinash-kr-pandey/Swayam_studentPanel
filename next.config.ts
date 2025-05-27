@@ -2,7 +2,17 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ["sbs.ac.in", "storage.googleapis.com", "ptuexams.in"],
+    domains: [
+      "sbs.ac.in",
+      "storage.googleapis.com",
+      "ptuexams.in",
+      "hoping-minds.s3.ap-south-1.amazonaws.com",
+      "drdy957pjga3n.cloudfront.net",
+      "youtu.be",
+      "images.app.goo.gl",
+      "upload.wikimedia.org",
+      "www.usnews.com", // ✅ Add this line
+    ],
   },
 };
 

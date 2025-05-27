@@ -1,7 +1,7 @@
 import Layout from "@/layouts";
 // import Hero from "@/sections/hero";
-import TopCategories from "@/sections/top-categories";
-import TopProducts from "@/sections/top-products";
+// import TopCategories from "@/sections/top-categories";
+// import TopProducts from "@/sections/top-products";
 // import Contact from "@/sections/contact";
 // import { Backgrounds } from "@/lib/constant";
 
@@ -37,8 +37,8 @@ export default function Home() {
   return (
     <Layout>
       {/* <Hero Backgrounds={Backgrounds} /> */}
-      <TopCategories />
-      <TopProducts  />
+      {/* <TopProducts  />
+      <TopCategories /> */}
       {/* <Contact /> */}
     </Layout>
   );

@@ -1,30 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "@/layouts/header";
 import MobileHeader from "@/layouts/header/mobile";
 import Footer from "@/layouts/footer";
 import Sidebar from "./sidebar";
+import TopProducts from "@/sections/top-products";
+import TopCategories from "@/sections/top-categories";
 
-type Props = {
-  children: React.ReactNode;
-};
+const Layout = () => {
+  const [searchTerm, setSearchTerm] = useState("");
 
-const Layout = ({ children }: Props) => {
   return (
     <div>
-      {/* Top Header */}
-      <Header />
+      {/* Header with searchTerm state */}
+      <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <MobileHeader />
 
-      {/* Main Layout with Sidebar and Content */}
       <div className="flex mt-[80px]">
-        {/* Sidebar */}
-        <div className="w-60 sticky h-fit bg-white shadow self-start flex flex-row justify-center pt-10">
+        <div
+          className="w-70 fixed top-[80px] left-0 bg-white shadow pt-10"
+          style={{ height: "calc(100vh - 80px)", overflowY: "auto" }}
+        >
           <Sidebar />
         </div>
 
-        {/* Main Content */}
-        <div className="flex-1 ml-4">
-          <main>{children}</main>
+        <div className="flex-1 ml-60 pl-4">
+          <main>
+            {/* Pass searchTerm prop to components that need it */}
+            <TopProducts searchTerm={searchTerm} />
+            <TopCategories />
+            {/* Add other sections here as needed */}
+          </main>
         </div>
       </div>
 
